@@ -1,0 +1,21 @@
+{
+  "name": "ruflo-knowledge-keeper",
+  "description": "Lightweight AI memory — 32 MCP tools, zero API keys, Obsidian compatible. Save, search, connect, and review knowledge locally.",
+  "version": "1.6.0",
+  "author": {
+    "name": "zsc-glitch",
+    "url": "https://github.com/zsc-glitch"
+  },
+  "homepage": "https://github.com/zsc-glitch/knowledge-keeper-mcp",
+  "license": "MIT",
+  "keywords": [
+    "ruflo",
+    "knowledge",
+    "memory",
+    "mcp",
+    "obsidian",
+    "bm25",
+    "search",
+    "graph"
+  ]
+}
