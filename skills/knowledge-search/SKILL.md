@@ -2,7 +2,7 @@
 name: knowledge-search
 description: Search knowledge with BM25 keyword, TF-IDF semantic, or hybrid RRF fusion. Use when you need to recall previously saved information.
 argument-hint: "<query>"
-allowed-tools: mcp__knowledge-keeper__knowledge_search mcp__knowledge-keeper__knowledge_bm25_search mcp__knowledge-keeper__knowledge_semantic_search mcp__knowledge-keeper__knowledge_hybrid_search mcp__knowledge-keeper__knowledge_recent mcp__knowledge-keeper__knowledge_duplicates Bash
+allowed-tools: mcp__knowledge-keeper__knowledge_search mcp__knowledge-keeper__knowledge_bm25_search mcp__knowledge-keeper__knowledge_semantic_search mcp__knowledge-keeper__knowledge_hybrid_search mcp__knowledge-keeper__knowledge_recent mcp__knowledge-keeper__knowledge_duplicates mcp__knowledge-keeper__knowledge_context Bash
 ---
 
 # Knowledge Search
@@ -24,6 +24,8 @@ When you need to find previously saved knowledge: concepts, decisions, notes, or
 4. **Recent knowledge** — List recently added/updated entries. Call `mcp__knowledge-keeper__knowledge_recent` with optional sort_by, days, type filters.
 
 5. **Duplicate detection** — Find similar knowledge points. Call `mcp__knowledge-keeper__knowledge_duplicates` with threshold and scope.
+
+6. **Context explorer** — Get full neighborhood around a knowledge point. Call `mcp__knowledge-keeper__knowledge_context` with ID and depth (quick/standard/deep). One call replaces multiple search+get+get-linked queries.
 
 ## Steps
 
@@ -56,5 +58,14 @@ Find duplicates:
 mcp__knowledge-keeper__knowledge_duplicates({
   threshold: 0.7,
   scope: "both"
+})
+```
+
+Explore context (standard depth):
+```
+mcp__knowledge-keeper__knowledge_context({
+  id: "kp-cp-abc123",
+  depth: "standard",
+  max_results: 10
 })
 ```
