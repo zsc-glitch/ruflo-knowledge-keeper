@@ -1,7 +1,7 @@
 {
   "name": "ruflo-knowledge-keeper",
-  "description": "Lightweight AI memory — 32 MCP tools, zero API keys, Obsidian compatible. Save, search, connect, and review knowledge locally.",
-  "version": "1.6.0",
+  "description": "Lightweight AI memory — 32 MCP tools, zero API keys, Obsidian compatible. Save, search, connect, and review knowledge locally. Context explorer, duplicate detection, hybrid search.",
+  "version": "1.7.1",
   "author": {
     "name": "zsc-glitch",
     "url": "https://github.com/zsc-glitch"
@@ -16,6 +16,8 @@
     "obsidian",
     "bm25",
     "search",
-    "graph"
+    "graph",
+    "context",
+    "duplicates"
   ]
 }
